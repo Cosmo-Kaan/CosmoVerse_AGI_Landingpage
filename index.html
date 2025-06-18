@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional multilingual AI translations and AI video content, specializing in the SingularityNET and AGI ecosystem. Reach a global audience." />
+  <title>AGI Translation & AI Video Service | Multilingual Content</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #0f0f0f;
+      color: #f4f4f4;
+      line-height: 1.6;
+    }
+    header {
+      padding: 3rem 2rem;
+      background: #1a1a1a;
+      text-align: center;
+      border-bottom: 3px solid #6b46c1;
+    }
+    header h1 span:first-child {
+      font-size: 2.5rem;
+      margin-bottom: 0.25rem;
+      display: block;
+      color: #fff;
+      font-weight: 700;
+    }
+    header h1 span[lang="de"] {
+      font-size: 2rem; /* Etwas kleiner für die zweite Sprache */
+      display: block;
+      color: #e0e0e0;
+      font-weight: 600;
+    }
+    header p span:first-child {
+      font-size: 1.2rem;
+      color: #ccc;
+      display: block;
+      margin-top: 0.5rem;
+    }
+    header p span[lang="de"] {
+      font-size: 1.1rem;
+      color: #bbb;
+      display: block;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 960px;
+      margin: auto;
+    }
+    section h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        color: #e0e0e0;
+    }
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Besser für Responsivität */
+      gap: 2rem;
+    }
+    .feature {
+      background: #1e1e1e;
+      padding: 2rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+      border-left: 5px solid #6b46c1;
+    }
+    .feature h3 {
+      margin-top: 0;
+      font-size: 1.4rem;
+      color: #f0f0f0;
+    }
+    .feature p {
+        font-size: 0.95rem;
+        color: #c0c0c0;
+    }
+    .video-embed {
+      margin-top: 4rem;
+      text-align: center;
+    }
+    .video-embed iframe {
+      width: 100%;
+      aspect-ratio: 16/9; /* Für responsive Video-Einbettung */
+      height: auto; /* Mit aspect-ratio kombinieren */
+      border: none;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    .contact-form {
+      margin-top: 4rem;
+      background: #1e1e1e;
+      padding: 2.5rem;
+      border-radius: 1rem;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    }
+    .contact-form h3 {
+      margin-top: 0;
+      text-align: center;
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+    }
+    .contact-form label {
+      display: block;
+      margin: 1rem 0 0.5rem;
+      font-weight: 600;
+      color: #d0d0d0;
+    }
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      border: 1px solid #333;
+      border-radius: 0.5rem;
+      background: #2c2c2c;
+      color: white;
+      box-sizing: border-box; /* Wichtig für width: 100% und padding */
+      font-size: 1rem;
+    }
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        outline: none;
+        border-color: #6b46c1;
+        box-shadow: 0 0 0 2px rgba(107, 70, 193, 0.5);
+    }
+    .contact-form button {
+      margin-top: 1.5rem;
+      background: #6b46c1;
+      color: white;
+      border: none;
+      padding: 0.9rem 2.2rem;
+      border-radius: 2rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      font-size: 1rem;
+      display: block;
+      width: 100%;
+      max-width: 250px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .contact-form button:hover {
+      background: #5531a8;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 4rem;
+      padding-bottom: 2rem; /* Etwas mehr Platz unten */
+    }
+    .cta a {
+      color: white;
+      padding: 1rem 2.5rem;
+      border-radius: 2rem;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-block;
+      margin: 0.5rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      font-size: 1.1rem;
+    }
+    .cta a:hover {
+        transform: translateY(-2px);
+    }
+    .btn-contact {
+      background: #6b46c1;
+    }
+    .btn-contact:hover {
+      background: #5531a8;
+    }
+    .btn-discord {
+      background: #5865F2; /* Discord Farbe */
+    }
+    .btn-discord:hover {
+      background: #4752C4; /* Dunklere Discord Farbe */
+    }
+
+    @media(max-width: 768px) {
+      header h1 span:first-child { font-size: 2rem; }
+      header h1 span[lang="de"] { font-size: 1.6rem; }
+      header p span:first-child { font-size: 1rem; }
+      header p span[lang="de"] { font-size: 0.9rem; }
+      section h2 { font-size: 1.6rem; }
+      .feature h3 { font-size: 1.2rem; }
+      .cta a { font-size: 1rem; padding: 0.8rem 2rem; }
+    }
+    @media(max-width: 480px) {
+        .features {
+            grid-template-columns: 1fr; /* Sicherstellen, dass auf sehr kleinen Screens nur eine Spalte ist */
+        }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>
+        <span>Multilingual AI Translations & AI Video Content</span>
+        <span lang="de">Mehrsprachige KI-Übersetzungen & KI-Video-Inhalte</span>
+    </h1>
+    <p>
+        <span>Bringing SingularityNET and AGI content to a global audience through expert AI translation and video.</span>
+        <span lang="de">SingularityNET- und AGI-Inhalte für ein globales Publikum durch professionelle KI-Übersetzung und Videoaufbereitung.</span>
+    </p>
+  </header>
+
+  <section>
+    <h2>What We Offer / Unser Angebot</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Advanced AI Translations / Fortschrittliche KI-Übersetzungen</h3>
+        <p>Leveraging cutting-edge AI for highly accurate and context-aware translations of complex texts, especially within the AGI and tech domains.<br>
+        <span lang="de">Einsatz modernster KI für hochpräzise und kontextsensitive Übersetzungen komplexer Texte, insbesondere im AGI- und Technologiebereich.</span></p>
+      </div>
+      <div class="feature">
+        <h3>AI-Powered Video Content / KI-gestützte Videoinhalte</h3>
+        <p>Transforming your content into engaging, multilingual video presentations with natural-sounding voiceovers, perfect for YouTube, social media, and presentations.<br>
+        <span lang="de">Umwandlung Ihrer Inhalte in ansprechende, mehrsprachige Videopräsentationen mit natürlich klingenden Voice-Overs – perfekt für YouTube, Social Media und Präsentationen.</span></p>
+      </div>
+      <div class="feature">
+        <h3>SingularityNET Aligned / Ausgerichtet auf SingularityNET</h3>
+        <p>Content tailored specifically for the AGI ecosystem – including Goertzel's work, OpenCog, and DAO updates.<br>
+        <span lang="de">Inhalte speziell für das AGI-Ökosystem – inklusive Goertzels Arbeiten, OpenCog und DAO-Updates.</span></p>
+      </div>
+      <div class="feature">
+        <h3>SEO + Blog Adaptation / SEO & Blog-Formatierung</h3>
+        <p>Blog-ready formats, metadata optimization, and clarity-focused editing for global reach and readability.<br>
+        <span lang="de">Blogfertige Formate, Metadaten-Optimierung und klare Struktur für weltweite Lesbarkeit.</span></p>
+      </div>
+    </div>
+
+    <div class="video-embed">
+      <h2>Multilingual AI Video Demonstration / Mehrsprachige KI-Video-Demonstration</h2>
+      <p>Experience the quality: This demonstration video showcases our AI translation and video capabilities in German, Spanish, Mandarin, and Arabic.<br>
+      <span lang="de">Überzeugen Sie sich von der Qualität: Dieses Demonstrationsvideo zeigt unsere KI-Übersetzungs- und Videofähigkeiten in Deutsch, Spanisch, Mandarin und Arabisch.</span></p>
+      <!-- WICHTIG: Ersetze VIDEO_ID durch die ID deines YouTube-Videos -->
+      <iframe src="https://www.youtube.com/embed/Ff74O6useLk" allowfullscreen title="Multilingual AI Video Demonstration"></iframe>
+    </div>
+
+    <div class="contact-form" id="contact">
+      <h3>Contact Me / Kontakt</h3>
+      <!-- WICHTIG: Manus AI wird hier die Formspree ID einfügen, die es generiert -->
+      <form action="https://formspree.io/f/xanjybvv" method="POST">
+        <input type="hidden" name="_subject" value="New Contact from AI Translation Landing Page!">
+        
+        <label for="name">Name / Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email / E-Mail</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message / Nachricht</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send / Senden</button>
+      </form>
+    </div>
+
+    <div class="cta">
+      <h2>Interested in Working Together? / Interesse an Zusammenarbeit?</h2>
+      <a href="#contact" class="btn-contact">Contact via Email / Kontakt per E-Mail</a>
+      <!-- WICHTIG: Manus AI wird hier deinen Discord Link einfügen -->
+      <a href="https://discord.gg/uWtyGsfJPv" target="_blank" rel="noopener noreferrer" class="btn-discord">Join our Discord / Tritt unserem Discord bei</a>
+    </div>
+  </section>
+  <footer>
+      <p style="text-align:center; padding: 2rem; font-size: 0.9rem; color: #aaa;">
+          © <script>document.write(new Date().getFullYear())</script> Cosmo Translation. All rights reserved. <br />
+          <!-- Optional: Impressum/Datenschutz Link -->
+          <!-- <a href="/impressum" style="color: #888;">Impressum</a> | <a href="/datenschutz" style="color: #888;">Datenschutz</a> -->
+      </p>
+  </footer>
+</body>
+</html>
